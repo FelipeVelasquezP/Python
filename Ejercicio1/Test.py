@@ -1,8 +1,11 @@
 import unittest
-import mymodule
-class TestMyModule(unittest.TestCase):
-    
-    def test_sum(self):
-        edadFutura = calcularEdadFutura(19,2020)
-        self.assertEqual(mymodule.sum(5, 7), 12)
-    
+
+from Ejercicio1 import calcularEdadFutura
+
+
+class Test(unittest.TestCase):
+    def test(self):
+        self.assertEqual(69,calcularEdadFutura(2020,19))
+        
+if __name__ == '__main__':
+    unittest.main()
